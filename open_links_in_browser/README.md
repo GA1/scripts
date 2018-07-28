@@ -1,0 +1,1 @@
+##### script for opening links in separate tabs
