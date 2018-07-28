@@ -1,0 +1,1 @@
+the resulting resized images will be saved here:
