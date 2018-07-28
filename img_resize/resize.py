@@ -31,8 +31,8 @@ def resize(img):
 
 
 for file_name in os.listdir(input_directory):
-    print(file_name)
     if is_image_file_name(file_name):
+        print('resizing the image: ' + file_name)
         img = Image.open(input_directory + file_name)
         img = resize(img)
         img.save(output_directory + file_name.lower())
