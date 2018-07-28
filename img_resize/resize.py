@@ -1,37 +1,36 @@
+import os
 import PIL
 from PIL import Image
+from math import sqrt
 
-NUMNBER_OF_PIXELS_ON_RESIZED_IMAGE = 1024 * 1024 * 2
+NUMNBER_OF_PIXELS_ON_RESIZED_IMAGE = 1024 * 1024 * 4
 image_extensions = ['.png', '.jpg', 'jpeg', '.bmp', ]
-
-mywidth = 300
+input_directory = "./input/"
+output_directory = "./output/"
 
 
 def is_image_file_name(file_name):
-    file_name=file_name.lower()
+    file_name = file_name.lower()
     for extension in image_extensions:
         if file_name.endswith(extension):
             return True
     return False
 
 
-import os
+def resize(img):
+    original_width = img.size[0]
+    original_height = img.size[1]
+    number_of_pixels_before_resizing = original_width * original_height
+    factor_of_resizing = number_of_pixels_before_resizing / NUMNBER_OF_PIXELS_ON_RESIZED_IMAGE
+    sqrt_of_factor_of_resizing = sqrt(factor_of_resizing)
+    new_width = int(original_width / sqrt_of_factor_of_resizing)
+    new_height = int(original_height / sqrt_of_factor_of_resizing)
+    img = img.resize((new_width, new_height), PIL.Image.ANTIALIAS)
+    return img
 
-input_directory = "./input/"
+
 for file_name in os.listdir(input_directory):
-    print(1111111)
-    print(file_name)
     if is_image_file_name(file_name):
         img = Image.open(input_directory + file_name)
-        # wpercent = (mywidth / float(img.size[0]))
-        # hsize = int((float(img.size[1]) * float(wpercent)))
-        print (img.size[0], img.size[1])
-        # img = img.resize((mywidth, hsize), PIL.Image.ANTIALIAS)
-        img.save('./output/resized.jpg')
-        print(os.path.join("/output", file_name))
-#
-# img = Image.open('someimage.jpg')
-# wpercent = (mywidth / float(img.size[0]))
-# hsize = int((float(img.size[1]) * float(wpercent)))
-# img = img.resize((mywidth, hsize), PIL.Image.ANTIALIAS)
-# img.save('resized.jpg')
+        img = resize(img)
+        img.save(output_directory + file_name.lower())
