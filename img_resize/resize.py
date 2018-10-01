@@ -36,3 +36,4 @@ for file_name in os.listdir(input_directory):
         img = Image.open(input_directory + file_name)
         img = resize(img)
         img.save(output_directory + file_name.lower())
+print('RESIZING DONE')
