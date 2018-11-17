@@ -36,13 +36,13 @@ def resize(img):
 
 
 image_file_names = list(filter(is_image_file_name, os.listdir(input_directory)))
-N = len(file_names)
+N = len(image_file_names)
 i = 1
-for file_name in file_names:
-    print('[' + str(i)  + '/' + str(N) + '] ' + 'resizing the image: ' + file_name)
-    img = Image.open(input_directory + file_name)
+for image_file_name in image_file_names:
+    print('[' + str(i)  + '/' + str(N) + '] ' + 'resizing the image: ' + image_file_name)
+    img = Image.open(input_directory + image_file_name)
     img = resize(img)
-    img.save(output_directory + file_name.lower())
+    img.save(output_directory + image_file_name.lower())
     i = i + 1
 print('RESIZING DONE')
 
