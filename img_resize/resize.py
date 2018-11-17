@@ -3,7 +3,7 @@ import PIL
 from PIL import Image
 from math import sqrt
 
-NUMBER_OF_MEGA_PIXELS = 4
+NUMBER_OF_MEGA_PIXELS = 6
 NUMBER_OF_PIXELS_ON_RESIZED_IMAGE = 1024 * 1024 * NUMBER_OF_MEGA_PIXELS
 image_extensions = ['.png', '.jpg', 'jpeg', '.bmp', ]
 input_directory = "./input/"
@@ -30,14 +30,14 @@ def resize(img):
     return img
 
 
-file_names = os.listdir(input_directory)
+file_names = list(filter(is_image_file_name, os.listdir(input_directory)))
 N = len(file_names)
 i = 1
 for file_name in file_names:
-    if is_image_file_name(file_name):
-        print('[' + str(i)  + '/' + str(N) + '] ' + 'resizing the image: ' + file_name)
-        img = Image.open(input_directory + file_name)
-        img = resize(img)
-        img.save(output_directory + file_name.lower())
-        i = i + 1
+    print('[' + str(i)  + '/' + str(N) + '] ' + 'resizing the image: ' + file_name)
+    img = Image.open(input_directory + file_name)
+    img = resize(img)
+    img.save(output_directory + file_name.lower())
+    i = i + 1
 print('RESIZING DONE')
+
