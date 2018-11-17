@@ -35,7 +35,7 @@ def resize(img):
     return img
 
 
-file_names = list(filter(is_image_file_name, os.listdir(input_directory)))
+image_file_names = list(filter(is_image_file_name, os.listdir(input_directory)))
 N = len(file_names)
 i = 1
 for file_name in file_names:
