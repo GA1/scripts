@@ -1,9 +1,14 @@
+import argparse
 import os
 import PIL
 from PIL import Image
 from math import sqrt
 
-NUMBER_OF_MEGA_PIXELS = 6
+parser = argparse.ArgumentParser()
+parser.add_argument('-m', metavar="mega_pixels", help="Number of Megapixels", type=float, required=False, default=4)
+
+args = parser.parse_args()
+NUMBER_OF_MEGA_PIXELS = args.m
 NUMBER_OF_PIXELS_ON_RESIZED_IMAGE = 1024 * 1024 * NUMBER_OF_MEGA_PIXELS
 image_extensions = ['.png', '.jpg', 'jpeg', '.bmp', ]
 input_directory = "./input/"
