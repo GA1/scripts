@@ -1,9 +1,15 @@
 from pydub import AudioSegment
 
 
-def trim(minute_start, second_start, minute_stop, second_stop, input_file_path, output_file_path):
+def trim(input_file_path, output_file_path, minute_start, second_start, minute_stop, second_stop):
     sound = AudioSegment.from_file(input_file_path, format="mp3")
     trimmed_sound = sound[(minute_start * 60 + second_start) * 1000: (minute_stop * 60 + second_stop) * 1000]
+    trimmed_sound.export(output_file_path, format="mp3")
+
+
+def trimLastNSeconds(input_file_path, output_file_path, N):
+    sound = AudioSegment.from_file(input_file_path, format="mp3")
+    trimmed_sound = sound[:-N * 1000]
     trimmed_sound.export(output_file_path, format="mp3")
 
 
@@ -77,10 +83,17 @@ data = [
 
 for d in data:
     print(d[4] + '.mp3')
-    trim(d[0],
-         d[1],
-         d[2],
-         d[3],
+    # trim(
+    #      'input_files/' + d[4] + '.mp3',
+    #      'results/' + d[4] + '.mp3',
+    #      d[0],
+    #      d[1],
+    #      d[2],
+    #      d[3]
+    #      )
+    trimLastNSeconds(
          'input_files/' + d[4] + '.mp3',
-         'results/' + d[4] + '.mp3'
+         'results/' + d[4] + '.mp3',
+         37
          )
+
