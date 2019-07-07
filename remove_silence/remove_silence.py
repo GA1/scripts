@@ -33,5 +33,14 @@ def remove_silence_from_sound(sound):
         result = result + chunks[i]
     return result
 
+data = [
+    # 'hsk4_1',
+    # 'hsk4_2',
+    # 'hsk4_3',
+    'hsk4_4',
+    'hsk4_5',
+]
 
-remove_leading_silence_from_file_and_save('./input_files/', 'H41001', '.mp3', './results/', 'result', '.mp3')
+for d in data:
+    print(d + '.mp3')
+    remove_leading_silence_from_file_and_save('./input_files/', d, '.mp3', './results/', d, '.mp3')
