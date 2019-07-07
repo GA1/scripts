@@ -7,7 +7,7 @@ def trim(input_file_path, output_file_path, minute_start, second_start, minute_s
     trimmed_sound.export(output_file_path, format="mp3")
 
 
-def trimLastNSeconds(input_file_path, output_file_path, N):
+def trim_last_n_seconds(input_file_path, output_file_path, N):
     sound = AudioSegment.from_file(input_file_path, format="mp3")
     trimmed_sound = sound[:-N * 1000]
     trimmed_sound.export(output_file_path, format="mp3")
@@ -91,7 +91,7 @@ for d in data:
     #      d[2],
     #      d[3]
     #      )
-    trimLastNSeconds(
+    trim_last_n_seconds(
          'input_files/' + d[4] + '.mp3',
          'results/' + d[4] + '.mp3',
          37
