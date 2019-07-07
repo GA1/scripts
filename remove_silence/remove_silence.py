@@ -7,21 +7,30 @@ def remove_leading_silence_from_file_and_save(input_directory_path, input_file_n
     result.export(result_directory_path + result_file_name + result_file_extension, format='mp3')
 
 
+def from_to_are_silent(chunks, from_index, to_index):
+    for i in range(from_index, to_index):
+        if -30 < chunks[i].dBFS:
+            return False
+    return True
+
+
 def remove_silence_from_sound(sound):
-    chunk_size = 1000
+    chunk_size = 5
+    chunk_buffer = 6
     result = AudioSegment.empty()
-    print(len(sound))
-    for i in range(0, len(sound), chunk_size):
-        chunk = sound[i * chunk_size: (i + 1) * chunk_size]
-        # print(chunk.dBFS)
-        # if -30.0 < chunk.dBFS:
-        print(len(result))
-        print(len(chunk))
-        print(len(result + chunk))
-        result = result + chunk
-        print(len(result))
-        # print(chunk.dBFS)
+    chunks_raw = sound[::chunk_size]
+    chunks = []
+    for chunk_raw in chunks_raw:
+        chunks.append(chunk_raw)
+    print(len(chunks))
+    for i in range(0, chunk_buffer):
+        result = result + chunks[i]
+    for i in range(chunk_buffer, len(chunks) - chunk_buffer):
+        if not from_to_are_silent(chunks, i - chunk_buffer, i + chunk_buffer):
+            result = result + chunks[i]
+    for i in range(len(chunks) - chunk_buffer, len(chunks)):
+        result = result + chunks[i]
     return result
 
 
-remove_leading_silence_from_file_and_save('./input_files/', '90-120s', '.mp3', './results/', 'result', '.mp3')
+remove_leading_silence_from_file_and_save('./input_files/', 'H41001', '.mp3', './results/', 'result', '.mp3')

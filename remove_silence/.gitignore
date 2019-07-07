@@ -1,1 +1,3 @@
 venv_remove_silence
+input_files/*
+results/*
