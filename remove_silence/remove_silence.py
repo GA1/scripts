@@ -14,21 +14,22 @@ def from_to_are_silent(chunks, from_index, to_index):
     return True
 
 
+CHUNK_SIZE = 500 # in ms
+CHUNK_BUFFER = 6
+
+
 def remove_silence_from_sound(sound):
-    chunk_size = 5
-    chunk_buffer = 6
     result = AudioSegment.empty()
-    chunks_raw = sound[::chunk_size]
+    chunks_raw = sound[::CHUNK_SIZE]
     chunks = []
     for chunk_raw in chunks_raw:
         chunks.append(chunk_raw)
-    print(len(chunks))
-    for i in range(0, chunk_buffer):
+    for i in range(0, CHUNK_BUFFER):
         result = result + chunks[i]
-    for i in range(chunk_buffer, len(chunks) - chunk_buffer):
-        if not from_to_are_silent(chunks, i - chunk_buffer, i + chunk_buffer):
+    for i in range(CHUNK_BUFFER, len(chunks) - CHUNK_BUFFER):
+        if not from_to_are_silent(chunks, i - CHUNK_BUFFER, i + CHUNK_BUFFER):
             result = result + chunks[i]
-    for i in range(len(chunks) - chunk_buffer, len(chunks)):
+    for i in range(len(chunks) - CHUNK_BUFFER, len(chunks)):
         result = result + chunks[i]
     return result
 
