@@ -10,6 +10,7 @@ if (
   traditionalLines.length !== pinyinLines.length &&
   pinyinLines.length !== englishLines.length
 ) {
+  console.log(11111111111111)
   console.log('Files have different number of lines')
   console.log('simplified.txt: ' + simplifiedLines.length)
   console.log('traditionalLines.txt: ' + traditionalLines.length)
@@ -21,11 +22,9 @@ if (
   for (let i = 0; i < N; i++) {
     result.push(simplifiedLines[i])
     result.push(traditionalLines[i])
-    result.push('\n')
     result.push(pinyinLines[i])
     result.push(englishLines[i])
-    result.push('\n')
-    result.push('\n')
+    result.push('')
   }
-  saveString(result.join('\n'), '../output/result.txt')
+  saveString('./output/result.txt', result.join('\n'))
 }

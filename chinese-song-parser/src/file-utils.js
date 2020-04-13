@@ -10,7 +10,7 @@ function saveString(filePath, stringToSave) {
     if (error) {
       console.log('ERROR: ' + error)
     } else {
-      console.log('SUCCESS')
+      console.log('SUCCESS SAVING FILE AS: ' + filePath)
     }
   })
 }
