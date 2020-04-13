@@ -1,0 +1,28 @@
+po POMODORO
+
+
+Po 20:00
+- napisac do xian hong
+- zamowic "unfolding the language"
+- wyslac do Olki: https://app.fullstory.com/ui/EYWCH/session/5059316332118016:(5059316332118016!6078900531118080(5841086958813184(1370:1450:158058:158570:158656:158816:158951:159402:159521:159777:160042:160337:160649:160740:415282:415472:415633:415816:415968:416065:416240:555545:555697:555935:556176:556179:556264:556632:556775:557176:557320:557472:624882:625153:625321:625560:626192:626408:626536:626768:711312:711811:711845:711877:711910:712183:712383:712485:712599:712784)))not
+
+
+W tym tygodniu
+
+
+W tym miesiacu
+
+- zadzwonic do piechowicza
+- napisac artykul o uzywaniu tylko javascripta
+- napisac artykul o declinatorze
+- napisac artykul o poezji polskie i wietnamskiej, o tym jak autorzy tworza jezyk, o tym ze mial liczbe podwojna, przyklad z oczy
+- stworzyc filmik o dziwnych dwuznacznyhc slowach jezyka, hiszpanskie: cura, esposa, derecho derecho, prawa, prawo, gazeta, cañón, pomelo, paloma, 
+- filmik o kryzysie i mozliwosci w chinskim
+- stworzyc filmik o tym dlaczego w polskim sa deklinacje
+
+Tiengos: 
+- make logo clickable
+- think about auth 0
+- fav icon in the business
+- mail to for email section
+
