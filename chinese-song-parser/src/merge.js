@@ -10,7 +10,6 @@ if (
   traditionalLines.length !== pinyinLines.length &&
   pinyinLines.length !== englishLines.length
 ) {
-  console.log(11111111111111)
   console.log('Files have different number of lines')
   console.log('simplified.txt: ' + simplifiedLines.length)
   console.log('traditionalLines.txt: ' + traditionalLines.length)
