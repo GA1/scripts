@@ -1,4 +1,4 @@
-const {saveString} = require("./file-utils");
+const { saveString } = require('./file-utils')
 const { getLines } = require('./file-utils')
 const simplifiedLines = getLines('./input/simplified.txt')
 const traditionalLines = getLines('./input/traditional.txt')
@@ -17,7 +17,7 @@ if (
   console.log('english.txt: ' + englishLines.length)
 } else {
   const result = []
-  const N = simplifiedLines.length;
+  const N = simplifiedLines.length
   for (let i = 0; i < N; i++) {
     result.push(simplifiedLines[i])
     result.push(traditionalLines[i])
@@ -25,5 +25,5 @@ if (
     result.push(englishLines[i])
     result.push('')
   }
-  saveString('./output/陳奕迅, 王菲 - 因為愛情.txt', result.join('\n'))
+  saveString(`./output/${simplifiedLines[0]}.txt`, result.join('\n'))
 }
