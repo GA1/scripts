@@ -25,5 +25,5 @@ if (
     result.push(englishLines[i])
     result.push('')
   }
-  saveString('./output/邓丽君 - 海韵.txt', result.join('\n'))
+  saveString('./output/陳奕迅, 王菲 - 因為愛情.txt', result.join('\n'))
 }
