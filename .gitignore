@@ -2,3 +2,5 @@
 *.idea
 audio_trimmer/input_files
 audio_trimmer/results
+**output**
+**input**
