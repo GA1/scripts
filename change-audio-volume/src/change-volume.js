@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process');
 
-const VOLUME = 64.0
+const VOLUME = 4.0
 
 const normalizeFileNames = () => {
   const inputDir = path.join(__dirname, '..', 'input')
