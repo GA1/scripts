@@ -13,10 +13,12 @@ for (let i = START; i < dates.length; i++) {
       daysInTurkey++
     }
   }
+  console.log(daysInTurkey, dates[i][0])
   if (90 < daysInTurkey) {
+    dates[i][0]
     break;
   }
   lastAllowedDayToStayInTurkey = dates[i][0]
 }
 
-console.log(`Last allowed day to stay in Turkey is ${lastAllowedDayToStayInTurkey}`)
+console.log(`Last allowed day to stay in Turkey is ${lastAllowedDayToStayInTurkey} (on this day I have to leave)`)
