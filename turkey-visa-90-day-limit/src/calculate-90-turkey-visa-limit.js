@@ -2,18 +2,18 @@ const { dates } = require('./dates')
 
 console.log(dates[180][0])
 
-const START = 180
+const START = 70
 
 let lastAllowedDayToStayInTurkey = dates[START][0]
 
 for (let i = START; i < dates.length; i++) {
   let daysInTurkey = 0
   for (let j = 0; j < 180; j++) {
-    if (dates[i - j][1]) {
+    if (0 < i - j && dates[i - j][1]) {
       daysInTurkey++
     }
   }
-  console.log(daysInTurkey, dates[i][0])
+  console.log(i, daysInTurkey, dates[i][0])
   if (90 < daysInTurkey) {
     dates[i][0]
     break;
