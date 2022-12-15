@@ -1,1 +1,0 @@
-put here images with extensions: `.png`, `.jpg`, `jpeg`, `.bmp`, 
