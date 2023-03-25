@@ -1,11 +1,11 @@
 为什么我要对你掉眼泪
 為什麼我要對你掉眼淚
-WèiShénme wǒ yào duì nǐ diào yǎnlèi
+Wèishénme wǒ yào duì nǐ diào yǎnlèi
 why do i cry for you
 
-你难道不明白是为了爱
-你難道不明白是為了愛
-nǐ nándào bù míngbái shì wèile ài
+你难道不明白为了爱
+你難道不明白為了愛
+nǐ nándào bù míngbái wèiliao ài
 don't you understand it's for love
 
 只有那有情人眼泪最珍贵
@@ -15,7 +15,7 @@ Only the lover's tears are the most precious
 
 一颗颗眼泪都是爱都是爱
 一顆顆眼淚都是愛都是愛
-yī kē kē yǎnlèi dōu shì ài dū shì ài
+yī kē kē yǎnlèi dōu shì ài doū shì ài
 every tear is love is love
 
 为什么要对你掉眼泪
@@ -23,9 +23,9 @@ every tear is love is love
 wèishéme yào duì nǐ diào yǎnlèi
 why do i cry for you
 
-你难道不明白是为了爱
-你難道不明白是為了愛
-nǐ nándào bù míngbái shì wèile ài
+你难道不明白为了爱
+你難道不明白為了愛
+nǐ nándào bù míngbái shì wèiliao ài
 don't you understand it's for love
 
 要不是有情人跟我要分开
@@ -43,9 +43,9 @@ My tears won't fall down
 hǎo chūn cái lái chūnhuā zhèng kāi
 Good spring is coming, spring flowers are blooming
 
-你怎么舍得说再会
-你怎麼捨得說再會
-nǐ zěnme shědé shuō zài huì
+你怎舍得说再会
+你怎捨得說再會
+nǐ zěn shědé shuō zài huì
 how dare you say goodbye
 
 我在深闺 望穿秋水
@@ -65,7 +65,7 @@ why do i cry for you
 
 你难道不明白是为了爱
 你難道不明白是為了愛
-nǐ nándào bù míngbái shì wèile ài
+nǐ nándào bù míngbái wèiliao ài
 don't you understand it's for love
 
 要不是有情人跟我要分开
@@ -78,37 +78,7 @@ If it wasn't for a lover who wanted to separate from me
 wǒ yǎnlèi bù huì diào xiàlái diào xiàlái
 My tears won't fall down
 
-好春才来 春花正开
-好春才來 春花正開
-hǎo chūn cái lái chūnhuā zhèng kāi
-Good spring is coming, spring flowers are blooming
-
-我在深闺 望穿秋水
-我在深閨 望穿秋水
-wǒ zài shēnguī wàng chuān qiū shuǐ
-I'm in the boudoir looking forward to the autumn water
-
-你不要忘了我情深 深如海
-你不要忘了我情深 深如海
-nǐ bùyào wàngle wǒ qíng shēn shēn rú hǎi
-Don't forget that my love is as deep as the sea
-
-为什么要对你掉眼泪
-為什麼要對你掉眼淚
-wèishéme yào duì nǐ diào yǎnlèi
-why do i cry for you
-
-你难道不明白是为了爱
-你難道不明白是為了愛
-nǐ nándào bù míngbái shì wèile ài
-don't you understand it's for love
-
-要不是有情人跟我要分开
-要不是有情人跟我要分開
-yào bùshì yǒuqíng rén gēn wǒ yào fēnkāi
-If it wasn't for a lover who wanted to separate from me
-
-我眼泪不会掉下来 掉下来
-我眼淚不會掉下來 掉下來
+我眼泪不会掉下来掉下来
+我眼淚不會掉下來掉下來
 wǒ yǎnlèi bù huì diào xiàlái diào xiàlái
-My tears won't fall, fall
+My tears won't fall down
