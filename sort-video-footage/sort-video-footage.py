@@ -3,15 +3,15 @@ import pathlib
 file_names = os.listdir('./to-sort')
 
 
-def is_gh5_name(name):
+def is_gh6_name(name):
     return name.startswith('P')
 
-
+# do poprawy
 def is_iPhone_name(name):
-    return not name.startswith('P')
+    return name.startswith('iPhone')
 
 def is_gopro11_name(name):
-    return not name.startswith('GX')
+    return name.startswith('GX')
 
 
 print(file_names)
@@ -27,9 +27,9 @@ for name in file_names:
     new_name = '{0}-{1}-{2}--{3}-{4}-{5}'.format(str(year), str(month), str(day), str(hour), str(minute), str(second))
     if is_iPhone_name(name):
         new_name = new_name + '--iPhone.mov'
-    if is_gh5_name(name):
-        new_name = new_name + '--gh5.mov'
-    if is_gh5_name(name):
+    if is_gh6_name(name):
+        new_name = new_name + '--gh6.mov'
+    if is_gopro11_name(name):
         new_name = new_name + '--gopro11.mov'
     print(new_name)
     os.rename('./to-sort/' + name, './to-sort/' + new_name)
