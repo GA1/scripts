@@ -18,4 +18,4 @@ const createFakeApiKeyBasedOn = (str: string): string => {
     .join('')
 }
 
-console.log(createFakeApiKeyBasedOn(process.env.YOUR_REAL_API_KEY || ''))
+console.log(createFakeApiKeyBasedOn(process.env.YOUR_REAL_SECRET || ''))

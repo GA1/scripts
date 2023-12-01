@@ -1,13 +1,13 @@
 {
-  "name": "faking-api-keys",
+  "name": "fake-secret",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "description": "",
-  "main": "dist/faking-api-keys.js",
+  "main": "dist/fake-secret.js",
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "start": "yarn clean && npx tsc && node dist/faking-api-keys.js"
+    "start": "yarn clean && npx tsc && node dist/fake-secret.js"
   },
   "author": "GA1",
   "dependencies": {},
