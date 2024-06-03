@@ -12,7 +12,7 @@ async function resizeAllImages() { // Function name is same as of file name
     let inputFile  = "./input/" + name;
     let outputFile = "./output/" + name;
 
-    sharp(inputFile).resize({ height: 1000 }).toFile(outputFile)
+    sharp(inputFile).resize({ height: 700 }).toFile(outputFile)
       .then(function(newFileInfo) {
         // newFileInfo holds the output file properties
         console.log("Success")
