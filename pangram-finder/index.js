@@ -1,20 +1,14 @@
-const s = 'Co wspólnego mają zdania:\n' +
-    '\n' +
-    '[show both pangrams on the screen]\n' +
-    '\n' +
-    '“Dość błazeństw, żrą mój pęk luźnych fig” i \n' +
-    '\n' +
-    '“Myślę: Fruń z płacht gąsko, jedź wbić nóż”,\n' +
-    '\n' +
-    'obydwa polskimi pangramami, bo zawierają każdą literę języka polskiego, nawet lepiej, są pangramami idealnymi, bo zawierają każdą literę tylko raz; jeśli nie weźmiemy pod uwagę tych dwóch pangramów idealnych to i cała moja wypowiedź z tego wideo byłaby pangramem ale brakuje mi jednej litery, której? [zoom in on my raised eyebrows]';
+const text = 'Myślę: fruń z płacht gąsko, \n' +
+    'jedź wbić nóż.';
 
 // Function to remove content between quotes and square brackets
 function cleanText(text) {
-  // Remove content between double quotes
-  text = text.replace(/“[^”]*"/g, '');
-  // Remove content between square brackets
-  text = text.replace(/\[[^\]]*\]/g, '');
-  return text;
+  return text
+      .replace(/\[[^\]]*\]/g, '') // Remove content in square brackets first
+      .replace(/"[^"]*"/g, '') // Then remove content in quotes
+      .replace(/[,;:?]/g, '') // Remove punctuation
+      .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+      .trim(); // Remove leading/trailing spaces
 }
 
 // Polish alphabet with both lowercase and uppercase letters
@@ -26,20 +20,24 @@ const polishAlphabet = {
 };
 
 // Clean the text first
-const cleanedText = cleanText(s);
+const cleanedText = cleanText(text);
+console.log('Cleaned text:', cleanedText);
 
-console.log(s)
+// Count total letters
+let totalLetters = 0;
 
 // Count letters in cleaned text
 for (let char of cleanedText.toLowerCase()) {
   if (char in polishAlphabet) {
     polishAlphabet[char]++;
+    totalLetters++;
   }
 }
 
-// Print only letters that appear in the text
-for (let [letter, count] of Object.entries(polishAlphabet)) {
-  if (count > 0) {
-    console.log(`${letter}: ${count}`);
-  }
-}
+// Find missing letters (those with count 0)
+const missingLetters = Object.entries(polishAlphabet)
+    .filter(([_, count]) => count === 0)
+    .map(([letter]) => letter);
+
+console.log('\nTotal letters:', totalLetters);
+console.log('Missing letters:', missingLetters.join(', '));
