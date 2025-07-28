@@ -1,0 +1,13 @@
+{
+  "name": "img-to-pdf",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "fs": "^0.0.1-security"
+  }
+} 
